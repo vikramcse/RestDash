@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>REST Viewer</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+		<link rel="stylesheet" href="./lib/progress/nprogress.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/">Rest Client</a>
+				</div>
+			</div>
+		</nav>
+		<div class="container" id="main">
+			<div class="row">
+				<div class="col-lg-10">
+					<div>
+						<form method="POST">
+							<div class="radio">
+								<label class="radio-inline">
+									<input type="radio" id="getID" name="methodOption" value="GET"> GET
+								</label>
+								<label class="radio-inline">
+									<input type="radio" id="postID" name="methodOption" value="POST"> POST
+								</label>
+							</div>
+							<div class="form-group">
+								<label for="urlInput">Enter Url to Test</label>
+								<input type="url" class="form-control" id="urlInput" placeholder="Enter URL" required>
+							</div>
+							<button type="submit" class="btn btn-success">Submit</button>
+							<br/>
+							<br/>
+							<div class="header-input form-group">
+								<div class="form-group">
+									<label for="output">
+										Header
+									</label>
+									<textarea class="resizable form-control" id="header" rows="5"></textarea>
+								</div>
+								
+							</div>
+						</form>
+					</div>
+					<br/>
+					<br/>
+					<div>
+						<div class="form-group">
+							<label for="output">
+								OUTPUT
+							</label>
+							<textarea class="resizable form-control" id="output" rows="15"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./lib/jquery/dist/jquery.min.js"></script>
+	<script src="./lib/progress/nprogress.js"></script>
+	<script src="notify.min.js"></script>
+	<script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<script src="app.js"></script>
+</html>

@@ -1,0 +1,11 @@
+#main {
+	padding-top: 60px;
+}
+
+.resizable(@direction: both) {
+	// Options: horizontal, vertical, both
+	resize: @direction;
+	
+	// Safari fix
+	overflow: auto;
+}
